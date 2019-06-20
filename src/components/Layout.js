@@ -15,7 +15,7 @@ const TemplateWrapper = ({ children }) => {
         <meta name="description" content={description} />
 
         <link
-          rel="apple-touch-icon"
+          rel="apple-stouch-icon"
           sizes="180x180"
           href="/img/apple-touch-icon.png"
         />
@@ -31,7 +31,6 @@ const TemplateWrapper = ({ children }) => {
           href="/img/favicon-16x16.png"
           sizes="16x16"
         />
-
         <link
           rel="mask-icon"
           href="/img/safari-pinned-tab.svg"

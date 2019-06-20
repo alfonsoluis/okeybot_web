@@ -24,6 +24,88 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - file: "src/pages/index_okeybot.md"
+        label: "Rocketbots | Chat Automation for All Your Messaging Apps and Live Chat"
+        name: index
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+              - {label: "Align Style", name: "align", widget: "select", options: ["horizontal", "vertical"]}
+              - {label: "Imagen Hero", name: hero_image, widget: image}
+              - {label: "Encabezado Hero", name: heading, widget: string}
+              - {label: "Sub Encabezado Hero", name: subheading, widget: string}
+              - {label: "Texto Boton Acción Principal", name: hero_buton_text, widget: string}
+              - {label: "URL Boton Acción Principal", name: hero_buton_url, widget: string}
+              - {label: "Slogan del Hero", name: mainpitch, widget: string}
+              - label: "Iconos del Hero"
+                name: "hero_icons"
+                widget: "list"
+                field: {label: Icon, name: icon, widget: image}
+
+          - label: "Características Principales"
+            name: main_features
+            widget: object
+            fields:
+              - {label: "Encabezado", name: heading, widget: string}
+              - {label: "Sub Encabezado", name: subheading, widget: string}
+              - label: "Lista de Características"
+                name: "features"
+                widget: "list"
+                fields: 
+                  - {label: Icon, name: icon, widget: image}
+                  - {label: "Titulo", name: title, widget: string}
+                  - {label: "Descripción", name: "description", widget: "text"}
+
+          - label: "Características Generales"
+            name: general_features
+            widget: object
+            fields:
+              - {label: "Lado", name: "align", widget: "select", options: ["left", "right"]}
+              - {label: "Clasificación", name: clasification, widget: string}
+              - {label: "Enlace", name: link, widget: string}
+              - {label: "Título", name: title, widget: string}
+              - {label: "Descripción", name: description, widget: text}
+              - {label: "Imagen Hero", name: hero_image, widget: image}
+              - label: "Lista de Características"
+                name: "features"
+                widget: "list"
+                fields: 
+                  - {label: "Texto", name: text, widget: string}
+
+
+          - label: "Video Introductorio"
+            name: video
+            widget: object
+            fields:
+              - {label: "Enlace", name: link, widget: string}
+              - {label: "Título", name: title, widget: string}
+              - {label: "Descripción", name: description, widget: text}
+              - {label: "Imagen del Video", name: video_image, widget: image}
+              - label: "Lista de Características"
+                name: "video_features"
+                widget: "list"
+                fields: 
+                  - {label: "Titulo", name: text, widget: string}
+                  - {label: "Texto", name: text, widget: text}
+
+
+          - label: "Lista de Clientes"
+            name: client_list
+            widget: object
+            fields:
+              - {label: "Título", name: title, widget: string}
+              - {label: "Descripción", name: description, widget: text}
+              - label: "Lista de Clientes"
+                name: "clients"
+                widget: "list"
+                fields: 
+                  - {label: "Enlace", name: link, widget: string}
+                  - {label: "Logo", name: logo, widget: image}
+
+
       - file: "src/pages/index.md"
         label: "Landing Page"
         name: "index"
